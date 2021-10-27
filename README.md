@@ -92,3 +92,75 @@ function App() {
 
 export default App;
 ```
+# useEffect: olvida el ciclo de vida, ahora piensa en efectos
+useEffect nos permite manejar efectos que van a ser transmitidos dentro del componente.
+En este ejemplo se llama a una API, traemos la información y la ejecutaremos en el componente
+
+1. Creamos el componente Characters.jsx
+2. Usamos el API de RickandMorty
+Characters.jsx
+
+```js
+// importar useState y useEffect
+import React, {useState, useEffect} from 'react'
+
+
+const Characters = () => {
+    /**
+     * Lógica de useState
+     * constante donde internamente estructuramos los elementos que necesitamos
+     * de useState y lo iniciamos como un vector vacío
+     */
+    const [characters, setCharacters] = useState([]);
+    
+    /**
+     * Lógica de useEffect
+     * es una función con 2 parámetros
+     * el primero es una función anónima donde va a estar la lógica
+     * el segundo es una variable que esta escuchando si hay cambios 
+     */
+    useEffect(() => {
+        // useEffect llama a fetch, el cual obtiene la informacion de la api de RickAndMorty
+        fetch('https://rickandmortyapi.com/api/character/')
+        .then(response => response.json())
+        .then(data => setCharacters(data.results));
+    }, [])
+    
+    /** 
+     * Nombre del personaje
+     * Iteramos por cada uno de los elementos
+     */
+    return (
+        <div className="Characters">
+            {characters.map(character => (
+                <h2>{character.name}</h2>
+            ))}
+        </div>
+    )
+}
+
+export default Characters
+```
+App.js
+```js
+import React from 'react'
+// Importamos componente Header
+import Header from './components/Header';
+// Importamos componente Characters
+import Characters from './components/Characters';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <Characters />
+      <h1>
+        Hola Mundo
+      </h1>
+    </div>
+  );
+}
+
+export default App;
+```
