@@ -3,11 +3,22 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #1a9542;
+  margin-bottom: 15px;
 }
 
 header button {
   height: 30px;
-  padding: 7px 15px;
+  padding: 5px 15px;
   text-align: center;
-  
+  font-size: 18px;
+  border-style: none;
+  background-color: white;
+  font-weight: 700;
+}
+
+header button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
 }
