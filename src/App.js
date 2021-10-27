@@ -4,7 +4,7 @@ import {Header} from './components/Header'
 import {Character} from './components/Character'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const handleClick = () =>{
     setDarkMode(!darkMode);
