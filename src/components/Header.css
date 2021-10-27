@@ -1,0 +1,13 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header button {
+  height: 30px;
+  padding: 7px 15px;
+  text-align: center;
+  
+}

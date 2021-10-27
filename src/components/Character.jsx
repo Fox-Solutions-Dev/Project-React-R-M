@@ -1,4 +1,6 @@
 import {useState, useEffect} from 'react';
+import { Card } from './Card';
+import './Character.css'
 
 const Character = () => {
 
@@ -13,7 +15,7 @@ const Character = () => {
   return (
     <div className="Characters">
       {characters.map(character => (
-        <h2>{character.name}</h2>
+        <Card character={character} />
       ))}
     </div>
   );

@@ -1,0 +1,22 @@
+.Card-container{
+  max-width: 300px;
+  min-height: 500px;
+  border-radius: 16px;
+  /* border: 4px solid black; */
+  margin: 10px 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.Card-container figure{
+  margin: auto;
+}
+.Card-container figure img{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.Card--name {
+  font-weight: 500;
+  font-size: 20px;
+}
+.Card--info {
+  font-size: 18px;
+}

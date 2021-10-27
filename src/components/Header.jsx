@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Header.css'
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -8,7 +9,7 @@ const Header = () => {
   }
   
   return (
-    <div>
+    <header>
       <h1>React Hooks</h1>
       <button 
         type="button" 
@@ -16,7 +17,7 @@ const Header = () => {
       >
         {darkMode ? 'Dark Mode': 'Light Mode'}
       </button>
-    </div>
+    </header>
   );
 };
 
