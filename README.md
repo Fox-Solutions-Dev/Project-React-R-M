@@ -83,9 +83,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <h1>
-        Hola Mundo
-      </h1>
     </div>
   );
 }

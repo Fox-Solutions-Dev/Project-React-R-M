@@ -1,9 +1,9 @@
 import React from 'react';
 import './Card.css'
 
-const Card = ({character}) => {
+const Card = ({character, darkMode}) => {
   return (
-    <div className="Card-container">
+    <div className={darkMode?"Card-container":"Card-container-dm"}>
       <figure>
         <img src={character.image} alt="img-test" />
       </figure>

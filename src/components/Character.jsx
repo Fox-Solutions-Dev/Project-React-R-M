@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import { Card } from './Card';
 import './Character.css'
 
-const Character = () => {
+const Character = ({darkMode}) => {
 
   const [characters, setCharacters] = useState([]);
 
@@ -15,7 +15,7 @@ const Character = () => {
   return (
     <div className="Characters">
       {characters.map(character => (
-        <Card character={character} />
+        <Card character={character} darkMode={darkMode}/>
       ))}
     </div>
   );

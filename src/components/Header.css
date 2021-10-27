@@ -3,11 +3,11 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #1a9542;
+  background-color: #95f3f2;
   margin-bottom: 15px;
 }
 
-header button {
+.header-button {
   height: 30px;
   padding: 5px 15px;
   text-align: center;
@@ -17,8 +17,25 @@ header button {
   font-weight: 700;
 }
 
-header button:hover {
+.header-button:hover {
   cursor: pointer;
   background-color: black;
-  color: white;
+  color: #95f3f2;
+}
+
+.header-button-dm {
+  height: 30px;
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 18px;
+  border-style: none;
+  background-color: black;
+  font-weight: 700;
+  color: #95f3f2;
+}
+
+.header-button-dm:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
 }
