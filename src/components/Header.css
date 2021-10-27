@@ -13,29 +13,24 @@ header {
   text-align: center;
   font-size: 18px;
   border-style: none;
-  background-color: white;
   font-weight: 700;
 }
-
-.header-button:hover {
+.header-bg-light{
+  background-color: #1a9542;
+  color: #95f3f2;
+}
+.header-bg-dark{
+  background-color: black;
+  color: #95f3f2;
+}
+.header-bg-light:hover {
   cursor: pointer;
   background-color: black;
   color: #95f3f2;
 }
 
-.header-button-dm {
-  height: 30px;
-  padding: 5px 15px;
-  text-align: center;
-  font-size: 18px;
-  border-style: none;
-  background-color: black;
-  font-weight: 700;
-  color: #95f3f2;
-}
-
-.header-button-dm:hover {
+.header-bg-dark:hover {
   cursor: pointer;
-  background-color: white;
-  color: black;
+  background-color: #1a9542;
+  color: #95f3f2;
 }

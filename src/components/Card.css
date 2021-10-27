@@ -4,20 +4,14 @@
   border-radius: 16px;
   /* border: 4px solid black; */
   margin: 10px 15px;
-  background-color: #95f3f2;
   box-shadow: rgba(169, 211, 233, 0.55) 0px 5px 15px;
   /* box-shadow: rgba(169, 211, 233, 0.4) 0px 2px 4px, rgba(169, 211, 233, 0.3) 0px 7px 13px -3px, rgba(169, 211, 233, 0.2) 0px -3px 0px inset; */
 }
-
-.Card-container-dm{
-  max-width: 300px;
-  min-height: 500px;
-  border-radius: 16px;
-  /* border: 4px solid black; */
-  margin: 10px 15px;
+.Card-bg-light{
+  background-color: #95f3f2;
+}
+.Card-bg-dark{
   background-color: #404040;
-  box-shadow: rgba(169, 211, 233, 0.55) 0px 5px 15px;
-  /* box-shadow: rgba(169, 211, 233, 0.4) 0px 2px 4px, rgba(169, 211, 233, 0.3) 0px 7px 13px -3px, rgba(169, 211, 233, 0.2) 0px -3px 0px inset; */
 }
 figure{
   margin: auto;
@@ -28,18 +22,18 @@ figure img{
 }
 .Card--name {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 25px;
 }
 .Card--info {
   font-size: 18px;
 }
 
-.Card-container-dm .Card--name {
+.Card-bg-dark .Card--name {
   font-weight: 500;
   font-size: 20px;
   color: #95f3f2;
 }
-.Card-container-dm .Card--info {
+.Card-bg-dark .Card--info {
   font-size: 18px;
   color: white;
 }

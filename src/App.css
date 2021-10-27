@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-.App-dm {
-  text-align: center;
+.App-bg-light {
+  background-color: white;
+}
+.App-bg-dark {
   background-color: black;
 }

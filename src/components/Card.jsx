@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './Card.css'
+import { ThemeContext } from '../Context/ThemeContext';
 
-const Card = ({character, darkMode}) => {
+const Card = ({character}) => {
+  const {theme} = useContext(ThemeContext);
   return (
-    <div className={darkMode?"Card-container":"Card-container-dm"}>
+    <div className={"Card-container Card-"+theme}>
       <figure>
         <img src={character.image} alt="img-test" />
       </figure>
