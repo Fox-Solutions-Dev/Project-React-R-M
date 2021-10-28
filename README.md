@@ -161,3 +161,54 @@ function App() {
 
 export default App;
 ```
+# useReducer: como useState, pero más escalable
+- Como useState, pero más escalable
+- Implementa una forma más amigable y llena de características para trabajar con el estado
+- useReducer a menudo es preferible a useState cuando:
+    - se tiene una lógica compleja que involucra múltiples subvalores
+    - el próximo estado depende del anterior.
+
+Ejemplo de useReducer
+
+```jsx
+const initialState = {count: 0};
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return {count: state.count + 1};
+    case 'decrement':
+      return {count: state.count - 1};
+    default:
+      throw new Error();
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <>
+      Count: {state.count}
+      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
+      <button onClick={() => dispatch({type: 'increment'})}>+</button>
+    </>
+  );
+}
+```
+## Ideas/conceptos claves
+
+**useReducer**.- Esta basada en la idea de Redux de tener una función pura que devuelve estados pero que se puede aplicar de una manera local en componentes
+
+useReducer nos ayuda a manejar el estado de una manera más simple evitando el código espagueti, el cual con useState y la función que actualiza el estado se repetiría bastante en muchas partes de nuestra lógica.
+# ¿Qué es memoization? Técnicas de optimización en programación funcional
+La memoria de JavaScript no es infinita, existe un máximo de funciones y cálculos que podemos hacer. Incluso si no la usamos toda, gastarla excesivamente causará que nuestras aplicaciones corran lento, con mucho lag o sencillamente briden una muy mala experiencia a los usuarios.
+
+Nuestro código puede parecer pequeño cuando utilizamos técnicas de programación funcional como currying y recursividad. Pero no te dejes engañar. Así estemos llamando a la misma función una y otra vez recursivamente, cada cálculo o llamado a esta función genera nuevos “bloques” en la pila de ejecuciones que debe hacer JavaScript. Esto afecta a la memoria de JavaScript y puede estropear nuestra aplicación.
+
+La buena noticia es que muy seguramente no tienes de qué preocuparte. Este “problema” no será realmente un problema a menos que construyas aplicaciones muy, muy grandes (por ejemplo, videojuegos en el navegador) donde la optimización de memoria es vital.
+
+¡Pero tampoco te relajes! Tu responsabilidad como desarrolladora web profesional es siempre prepararte para resolver cualquier problema de programación, incluso si requieren técnicas “avanzadas” de optimización para que nuestro programa funcione a la perfección y para todos nuestros usuarios.
+
+## Aplica memoization para evitar cálculos innecesarios
+La memoización (sí, sin r) es una técnica muy útil para evitar cálculos innecesarios en nuestro código. Guardamos el resultado de nuestros cálculos cada vez que los hacemos para no tener que repetirlos en el futuro. En otras palabras, estamos ahorrando grandes cantidades de tiempo a cambio de “mucho” espacio de almacenamiento.
+

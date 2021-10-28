@@ -17,7 +17,7 @@ header {
 }
 .header-bg-light{
   background-color: #1a9542;
-  color: #95f3f2;
+  color: black;
 }
 .header-bg-dark{
   background-color: black;
@@ -32,5 +32,5 @@ header {
 .header-bg-dark:hover {
   cursor: pointer;
   background-color: #1a9542;
-  color: #95f3f2;
+  color: black;
 }
