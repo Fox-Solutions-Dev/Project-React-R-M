@@ -1,5 +1,5 @@
 import './App.css';
-import { useContext } from "react";
+import React, { useContext } from "react";
 import {Header} from './components/Header'
 import {Character} from './components/Character'
 import { ThemeContext } from './Context/ThemeContext';

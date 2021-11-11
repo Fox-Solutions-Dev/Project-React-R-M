@@ -1,4 +1,4 @@
-import {useState, useReducer, useMemo, useRef, useCallback } from 'react';
+import React, {useState, useReducer, useMemo, useRef, useCallback } from 'react';
 import { Card } from './Card';
 import './Character.css'
 import Search from './Search';
