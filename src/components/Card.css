@@ -40,3 +40,15 @@ figure img{
 .Card--info b{
   color: #1a9542;
 }
+.Card--button{
+  background-color: #1a9542;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.Card--button:hover{
+  background-color: black;
+  color: #95f3f2;
+}

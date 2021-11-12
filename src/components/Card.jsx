@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import './Card.css'
 import { ThemeContext } from '../Context/ThemeContext';
 
-const Card = ({character}) => {
+const Card = ({character, handleClick}) => {
   const {theme} = useContext(ThemeContext);
   return (
     <div className={"Card-container Card-"+theme}>
@@ -13,6 +13,9 @@ const Card = ({character}) => {
       <p className="Card--info"><b>Status:</b> {character.status}</p>
       <p className="Card--info"><b>Specie:</b> {character.species}</p>
       <p className="Card--info"><b>Origin:</b> {character.origin.name}</p>
+      <button className="Card--button" onClick={()=>handleClick(character)}>
+        <i class="far fa-star"></i> Add to Favotire
+      </button>
     </div>
   );
 };

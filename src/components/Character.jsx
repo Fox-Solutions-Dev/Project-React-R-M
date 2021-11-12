@@ -62,13 +62,7 @@ const Character = () => {
 
       {filteredUsers.map(character => (
         <div key={'div'+character.id}>
-          <Card character={character} key={character.id}/>
-          <button 
-            type="button" 
-            onClick={()=>handleClick(character)}
-          >
-            Agregar a favoritos
-          </button>
+          <Card character={character} key={character.id} handleClick={handleClick}/>
         </div>
       ))}
     </div>
