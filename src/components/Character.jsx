@@ -52,19 +52,23 @@ const Character = () => {
   
   return (
     <div className="Characters">
-      {favorites.favorites.map(favorite =>(
-        <li key={favorite.id}>
-          {favorite.name}
-        </li>
-      ))}
-
-      <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />
-
-      {filteredUsers.map(character => (
-        <div key={'div'+character.id}>
-          <Card character={character} key={character.id} handleClick={handleClick}/>
-        </div>
-      ))}
+      <div className="Characters-FavList">
+        {favorites.favorites.map(favorite =>(
+          <li key={favorite.id}>
+            {favorite.name}
+          </li>
+        ))}
+      </div>
+      <div className="Character-Search">
+        <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />
+      </div>
+      <div className="Character-container">
+        {filteredUsers.map(character => (
+          <div key={'div'+character.id}>
+            <Card character={character} key={character.id} handleClick={handleClick}/>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
