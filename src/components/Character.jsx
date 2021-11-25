@@ -3,6 +3,7 @@ import { Card } from './Card';
 import './Character.css'
 import Search from './Search';
 import { useCharacters } from '../hooks/useCharacter';
+import { NotFound } from './NotFound';
 
 const initialState = {
   favorites: []
@@ -63,11 +64,14 @@ const Character = () => {
         <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />
       </div>
       <div className="Character-container">
-        {filteredUsers.map(character => (
+        {filteredUsers.length === 0 ? 
+        <NotFound/> : 
+        filteredUsers.map(character => (
           <div key={'div'+character.id}>
             <Card character={character} key={character.id} handleClick={handleClick}/>
           </div>
-        ))}
+        ))
+        }
       </div>
     </div>
   );
