@@ -1,0 +1,14 @@
+.Search-input{
+  width: 70%;
+  height: 10px;
+  border-radius: 20px;
+  margin: 15px auto;
+  padding: 14px 20px;
+  background-color: #95f3f2;
+  border: 3px solid black;
+  font-weight: 500;
+  outline: none;
+}
+.Search-input:focus {
+  border: 3px solid #1a9542;
+}
