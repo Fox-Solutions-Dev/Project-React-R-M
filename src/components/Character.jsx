@@ -1,5 +1,7 @@
 import React, {useState, useReducer, useMemo, useRef, useCallback } from 'react';
 import { Card } from './Card';
+import { FavoriteList } from './FavoriteList';
+import { FavoriteItem } from './FavoriteItem';
 import './Character.css'
 import Search from './Search';
 import { useCharacters } from '../hooks/useCharacter';
@@ -12,11 +14,16 @@ const API = 'https://rickandmortyapi.com/api/character/'
 
 const favoriteReducer = (state, action) =>{
   switch (action.type) {
-    case 'ADD_TO_FAVORITE':
+    case 'ADD_FAVORITE':
       return{
         ...state,
         favorites: [...state.favorites, action.payload]
       };
+    case 'REMOVE_FAVORITE':
+      const newFav = state.favorites.filter((item)=>{
+        return item.id !== action.payload.id;
+      })
+      return { favorites: newFav }
     default:
       return state
   }
@@ -28,8 +35,13 @@ const Character = () => {
   const searchInput = useRef(null);
 
   const characters = useCharacters(API);  
-  const handleClick = favorite => {
-    dispatch({ type: 'ADD_TO_FAVORITE', payload: favorite })
+  const handleClick = (character, favorite) => {
+    if(!favorite){
+      dispatch({ type: 'ADD_FAVORITE', payload: character })
+    }else{
+      dispatch({ type: 'REMOVE_FAVORITE', payload: character })
+    }
+    
   }
   
   // const handleSearch = () => {
@@ -52,13 +64,9 @@ const Character = () => {
   
   return (
     <div className="Characters">
-      <div className="Characters-FavList">
-        {favorites.favorites.map(favorite =>(
-          <li key={favorite.id}>
-            {favorite.name}
-          </li>
-        ))}
-      </div>
+      <FavoriteList>
+      {favorites.favorites.map(favorite => (<FavoriteItem key={favorite.id} name={favorite.name} />))}
+      </FavoriteList>
       <div className="Character-Search">
         <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />
       </div>
