@@ -7,7 +7,7 @@ function FavoriteItem (props) {
   return (
     <div className='favoriteItem'>
       <div className= 'favoriteContainer'>
-      <h1>{fav.name}</h1>
+      <p>{fav.name}</p>
         <figure>
             <img src={fav.image} alt="character" width="80"/>
             <p>{fav.species}</p>
