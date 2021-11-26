@@ -1,9 +1,10 @@
 import React from "react";
+import './FavoriteList.css'
 
 function FavoriteList(props) {
   return (
     <section>
-      <ul>
+      <ul className='favoriteList'>
         {props.children}
       </ul>
     </section>

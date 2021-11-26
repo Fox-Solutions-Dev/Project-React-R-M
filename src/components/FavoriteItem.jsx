@@ -1,17 +1,19 @@
 import React from "react";
+import "./FavoriteItem.css"
 
 function FavoriteItem (props) {
-  const { name } = props;
+  const { fav } = props;
+  console.log(fav);
   return (
-    <li>
-      <span>
-        C
-      </span>
-      <p>{name}</p>
-      <span>
-        X
-      </span>
-    </li>
+    <div className='favoriteItem'>
+      <div className= 'favoriteContainer'>
+      <h1>{fav.name}</h1>
+        <figure>
+            <img src={fav.image} alt="character" width="80"/>
+            <p>{fav.species}</p>
+        </figure>
+      </div>
+    </div>
   );
 }
 

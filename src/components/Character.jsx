@@ -65,7 +65,7 @@ const Character = () => {
   return (
     <div className="Characters">
       <FavoriteList>
-      {favorites.favorites.map(favorite => (<FavoriteItem key={favorite.id} name={favorite.name} />))}
+        {favorites.favorites.map(favorite => (<FavoriteItem key={favorite.id} fav={favorite} />))}
       </FavoriteList>
       <div className="Character-Search">
         <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />
