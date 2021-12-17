@@ -2,7 +2,7 @@ import React, {useState, useReducer, useMemo, useRef, useCallback } from 'react'
 import { Card } from './Card';
 import { FavoriteList } from './FavoriteList';
 import { FavoriteItem } from './FavoriteItem';
-import './Character.css'
+import '../styles/components/Character.css'
 import Search from './Search';
 import { useCharacters } from '../hooks/useCharacter';
 import { NotFound } from './NotFound';

@@ -1,5 +1,5 @@
 import React from "react";
-import "./FavoriteItem.css"
+import "../styles/components/FavoriteItem.css"
 
 function FavoriteItem (props) {
   const { fav } = props;

@@ -1,4 +1,4 @@
-import './Header.css'
+import '../styles/components/Header.css'
 import React, { useContext } from 'react';
 import { ThemeContext } from '../Context/ThemeContext';
 
