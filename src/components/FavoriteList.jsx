@@ -1,5 +1,5 @@
 import React from "react";
-import './FavoriteList.css'
+import '../styles/components/FavoriteList.css'
 
 function FavoriteList(props) {
   return (

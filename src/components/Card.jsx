@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import './Card.css'
+import '../styles/components/Card.css'
 import { ThemeContext } from '../Context/ThemeContext';
 
 const Card = ({character, handleClick}) => {

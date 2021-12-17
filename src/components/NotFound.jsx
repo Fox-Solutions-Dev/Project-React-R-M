@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import './NotFound.css'
+import '../styles/components/NotFound.css'
 import { ThemeContext } from '../Context/ThemeContext';
 
 export const NotFound = () => {
