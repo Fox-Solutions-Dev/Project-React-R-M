@@ -1,3 +1,5 @@
+'use client';
+
 import './styles/App.css';
 import React, { useContext } from "react";
 import { Header } from './components/Header';

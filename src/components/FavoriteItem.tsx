@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useContext } from "react";
 import "../styles/components/FavoriteItem.css";
 import { ThemeContext } from '../Context/ThemeContext';

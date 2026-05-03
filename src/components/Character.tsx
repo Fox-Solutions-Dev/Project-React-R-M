@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useReducer, useMemo, useRef, useCallback } from 'react';
 import { Card } from './Card';
 import { FavoriteList } from './FavoriteList';

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useContext } from 'react';
 import '../styles/components/Card.css';
 import { ThemeContext } from '../Context/ThemeContext';
