@@ -1,17 +1,24 @@
-import React, {useState, useContext} from 'react';
-import '../styles/components/Card.css'
+import React, { useState, useContext } from 'react';
+import '../styles/components/Card.css';
 import { ThemeContext } from '../Context/ThemeContext';
+import { Character } from '../hooks/useCharacter';
 
-const Card = ({character, handleClick}) => {
-  const [favorite, setFavorite] = useState(false)
+interface CardProps {
+  character: Character;
+  handleClick: (character: Character, favorite: boolean) => void;
+}
+
+const Card = ({ character, handleClick }: CardProps) => {
+  const [favorite, setFavorite] = useState(false);
+  const { theme } = useContext(ThemeContext);
 
   function favoriteStateButton() {
-    handleClick(character, favorite)
-    setFavorite(!favorite)
+    handleClick(character, favorite);
+    setFavorite(!favorite);
   }
-  const {theme} = useContext(ThemeContext);
+
   return (
-    <div className={"Card-container Card-"+theme}>
+    <div className={"Card-container Card-" + theme}>
       <figure>
         <img src={character.image} alt="img-test" />
       </figure>
@@ -19,17 +26,15 @@ const Card = ({character, handleClick}) => {
       <p className="Card--info"><b>Status:</b> {character.status}</p>
       <p className="Card--info"><b>Specie:</b> {character.species}</p>
       <p className="Card--info"><b>Origin:</b> {character.origin.name}</p>
-      {!favorite?(
+      {!favorite ? (
         <button className="Card--button Card-on" onClick={favoriteStateButton}>
           <i className="far fa-star"></i> Add to Favorite
         </button>
-      ):(
+      ) : (
         <button className="Card--button Card-off" onClick={favoriteStateButton}>
           <i className="fas fa-star"></i> Favorite
         </button>
       )}
-      
-      
     </div>
   );
 };
