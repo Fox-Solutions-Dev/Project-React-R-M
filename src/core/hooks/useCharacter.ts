@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 export interface Character {
   id: number;
@@ -15,8 +15,8 @@ const useCharacters = (url: string): Character[] => {
   const [characters, setCharacters] = useState<Character[]>([]);
   useEffect(() => {
     fetch(url)
-      .then(response => response.json())
-      .then(data => setCharacters(data.results));
+      .then((response) => response.json())
+      .then((data) => setCharacters(data.results));
   }, [url]);
   return characters;
 };
