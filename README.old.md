@@ -16,10 +16,13 @@ Los Hooks presentan una alternativa al desarrollo con clases, ya que estos viene
 Un Hook es una función especial que nos permitirá conectarnos a características de React, para trabajar con métodos especiales, los cuales nos permitirán manejar el estado de mejor forma sin depender de clases.
 
 Crear proyecto:
+
 ```
 npx create-react-app react-hooks
 ```
+
 Ejecutar proyecto:
+
 ```
 npm run start
 ```
